@@ -1,0 +1,157 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1;
+}
+
+.post, .comments {
+    margin: 1rem 0;
+    background: white;
+    padding: 1rem;
+}
+
+.post .post_info, .comments .comment_info {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.button-delete {
+    display: grid;
+    justify-content: right;
+    margin-bottom: 3rem;
+    margin-top: -30px;
+}
+
+.button-delete button {
+    display: inline-block;
+    padding: .5rem 1rem;
+    color: #548eaa;
+    border: 1px solid #548eaa;
+    margin: 0;
+    background-color: white;
+    border-radius: .25rem;
+    transition: all .5s;
+}
+
+.post .post_info .user_name, .comments .comment_info .user_name {
+    font-weight: bold;
+}
+
+.post > h2 {
+    margin-bottom: 2rem;
+}
+
+.post img{
+    max-width: 100%;
+    max-height: 45vh;
+    margin-bottom: 2rem;
+}
+
+.post .content * {
+    word-break: break-word;
+    white-space: normal;
+    margin-bottom: 2rem;
+}
+
+.post .tags {
+    margin-top: 1rem;
+
+}
+
+.post .tags a {
+    color: #548eaa;
+    transition: border-bottom-color .5s;
+    border-bottom: 1px solid transparent;
+}
+
+.post .tags a:hover {
+    border-bottom-color: #548eaa;
+}
+
+.post .post_stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.post .post_stats img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.post .post_stats .stat {
+    display: flex;
+    align-items: baseline;
+    gap: .5rem;
+}
+
+.post .post_stats .stat p {
+    font-size: 1.1rem;
+}
+
+.comments h2 {
+    margin-bottom: 2rem;
+}
+
+.comments .comment:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+.comments form label {
+    margin-bottom: .5rem;
+}
+
+.comments form {
+    margin: 1rem 0;
+}
+
+.comments form label, .comments form textarea {
+    display: block;
+    width: 100%;
+}
+
+.comments textarea {
+    resize: none;
+    padding: .5rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.comments form button {
+    display: inline-block;
+    padding: .5rem 1rem;
+    color: white;
+    background: #548eaa;
+    border: 1px solid #548eaa;
+    margin: 1rem 0;
+    border-radius: .25rem;
+    transition: all .5s;
+    font-size: 1rem;
+}
+
+button#show_form {
+    background-color: white;
+    font-size: 1.2rem;
+}
+
+button#show_form:hover {
+    color: #4695bc;
+}
+
+.comments > button {
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 600px){
+    .post .tags p {
+        line-height: 1.75rem;
+    }
+
+    .post .tags a {
+        margin: .5rem;
+    }
+}

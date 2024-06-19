@@ -1,0 +1,133 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main .inner_container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main .inner_container .results.not_found {
+    margin: auto;
+}
+
+form, .post {
+    padding: 1rem;
+    margin: 1rem 0;
+    background: white;
+}
+
+form input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.post {
+    padding: 1rem;
+    background: white;
+    display: block;
+    width: 100%;
+}
+
+.results .post {
+    box-sizing:border-box;
+    margin: 1rem 0;
+}
+
+.post .post_info {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.post .post_info .user_name {
+    font-weight: bold;
+}
+
+.results .post >h2 {
+    margin-bottom: 2rem;
+}
+
+.post .cover {
+    margin-bottom: 1rem;
+    width: 100%;
+    max-height: 45vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.post .cover img{
+    max-width: 100%;
+}
+
+.post .preview {
+    text-align: justify;
+}
+
+.post a {
+    padding: .5rem 1rem;
+    display: inline-block;
+    color: #548eaa;
+    border: 1px solid #548eaa;
+    margin: 1rem 0;
+    border-radius: .25rem;
+    transition: all .5s;
+}
+
+.post a:hover {
+    color: white;
+    background: #548eaa;
+}
+
+.post .post_stats {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.post .post_stats img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.post .post_stats .stat {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.post .post_stats .stat p {
+    font-size: 1.1rem;
+}
+
+.post .preview {
+    text-align: justify;
+    box-sizing: border-box;
+    word-break: break-word;
+    white-space: normal;
+}
+
+.not_found {
+    display: grid;
+    justify-content: center;
+}
+
+.not_found img {
+    max-width: 25vw;
+    max-height: 25vh;
+    margin: auto;
+}
+
+.not_found p {
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 2rem;
+}
